@@ -1,0 +1,243 @@
+:root {
+    /* Colors Primary */
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --focus-button: hsla(154, 59%, 51%, 0.8);
+    --button-border-bottom: rgba(18, 127, 94, 0.2);
+
+    /* Colors Accent */
+    --blue: hsl(248, 32%, 49%);
+
+    /* Colors Neutral */
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Font sizes */
+    --title-size-mobile: 1.9rem;
+    --title-font-desktop: 2.8rem;
+    --text-size: 1rem;
+    --input-font-size: 0.9rem;
+    --button-size: 0.95rem;
+    --small-print: 0.7rem;
+
+    /* Border Radius*/
+    --border-radius: 10px;
+    --border-radius-input: 8px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--red);
+    min-height: 100vh;
+}
+
+.content-wrap {
+    min-height: 100vh;
+    width: 340px;
+    background: url(images/bg-intro-mobile.png) no-repeat top / cover ;
+    margin: 0 auto;
+    display: grid;
+    place-content: center;
+}
+
+main {
+    padding: 0 0.6rem;
+}
+
+.title {
+    color: var(--white);
+    font-size: var(--title-size-mobile);
+    text-align: center;
+}
+
+.text {
+    color: var(--white);
+    font-size: var(--text-size);
+    text-align: center;
+    margin: 0 0 3rem;
+}
+
+.offer-text {
+    margin: 0 auto 1.8rem;
+    padding: 1.2rem 3rem;
+    height: 90px;
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: var(--text-size);
+    font-weight: 400;
+    text-align: center;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.highlight-offer {
+    font-weight: 700;
+}
+
+form {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    display: grid;
+    place-content: center;
+    box-shadow: 0 9px 0 rgba(0, 0, 0, 0.1);
+}
+
+input {
+    font-size: var(--input-font-size);
+    font-weight: 600;
+    height: 50px;
+    padding: 1.6rem 1rem;
+    margin-top: 1.2em;
+    border-radius: var(--border-radius-input);
+    border: 1px solid var(--grayish-blue);
+}
+
+input:first-child {
+    margin-top: 0;
+}
+
+input:focus {
+    outline: 1px solid var(--blue);
+}
+
+input.invalid {
+    background: url("images/icon-error.svg") no-repeat 95% / 20px 20px;
+    outline: 1.5px solid var(--red);
+    border-color: var(--red);
+}
+
+input.invalid::placeholder {
+    color: var(--red);
+}
+
+.error-msg, .error-msg-email {
+    color: var(--red);
+    font-size: var(--small-print);
+    font-weight: 400;
+    font-style: italic;
+    text-align: end;
+    margin-top: 0.3rem;
+    padding-right: 0.5rem;
+}
+
+.sign-up {
+    font-family: inherit;
+    font-size: var(--button-size);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--white);
+    background-color: var(--green);
+    height: 56px;
+    border: none;
+    border-bottom: 5px solid var(--button-border-bottom);
+    border-radius: var(--border-radius-input);
+    padding-top: 0.6rem;
+    margin-top: 1.2rem;
+}
+
+.sign-up:hover {
+    background-color: var(--focus-button);
+    cursor: pointer;
+}
+
+.terms-text {
+    text-align: center;
+    font-size: var(--small-print);
+    line-height: 1.3rem;
+    color: var(--grayish-blue);
+    padding: 0 1rem;
+    margin-top: 0.8rem;
+}
+
+.terms-services {
+    color: var(--red);
+    font-weight: 700;
+}
+
+.attribution {
+    font-size: var(--small-print);
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--white);
+}
+
+@media (min-width: 1200px) {
+    .content-wrap {
+        background: url(images/bg-intro-desktop.png) no-repeat center/ cover;
+        width: 100%;
+        margin: 0;
+    }
+
+    main {
+        height: 90vh;
+        width: 1060px;
+        background: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        ". ."
+        "left right"
+        "footer footer";
+        padding: 0;
+    }
+
+    .content-left {
+        grid-area: left;
+        display: grid;
+        place-content: center;
+    }
+
+    .content-right {
+        grid-area: right;
+        display: grid;
+        place-content: center;
+        padding: 0 1rem;
+    }
+
+    .offer-text {
+        width: 100%;
+        height: 55px;
+        padding: 0.85rem;
+        margin: 0;
+    }
+
+    .title {
+        text-align: start;
+        font-size: var(--title-font-desktop);
+        line-height: 3.2rem;
+        margin: 0;
+        padding: 0 3rem 0.5rem 0;
+    }
+
+    .text {
+        text-align: left;
+        margin: 0;
+        padding: 0.5rem 0;
+    }
+
+    form {
+        padding: 2.5rem;
+        margin: 1.2rem 0 0;
+    }
+
+    input {
+        padding: 1.6rem;
+    }
+
+    footer {
+        grid-area: footer;
+        align-self: end;
+        margin-top: 1rem;
+    }
+}
