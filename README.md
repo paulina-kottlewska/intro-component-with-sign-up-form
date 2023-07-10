@@ -6,9 +6,11 @@ This is a solution to the [Intro component with sign up form challenge on Fronte
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Screenshots](#screenshot)
   - [Link](#link)
 - [My process](#my-process)
+  - [Design](#design)
+  - [Development](#development)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
 
@@ -37,7 +39,7 @@ Users should be able to:
 
 ### Link
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: (https://intro-component-with-sign-up-form-pk.netlify.app/)
 
 ## My process
 
